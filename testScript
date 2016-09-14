@@ -1,0 +1,12 @@
+if [ $# -eq 0 ]
+then
+	echo "Usage: ./testScript MONEY - Note that MONEY should be > 10000 in order to start benifiting."
+else
+	echo "Testing trade using 'trade_moulinette'"
+	./trade_moulinette.php -p trade -f files/AMAZON1.TXT -m $1
+	./trade_moulinette.php -p trade -f files/BAC1.TXT -m $1
+	./trade_moulinette.php -p trade -f files/boeing5.txt -m $1
+	./trade_moulinette.php -p trade -f files/CISCO1.TXT -m $1
+	./trade_moulinette.php -p trade -f files/ibm5.txt -m $1
+	./trade_moulinette.php -p trade -f files/nike5.txt -m $1
+fi
